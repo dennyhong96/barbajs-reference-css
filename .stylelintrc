@@ -13,6 +13,6 @@
     "selector-max-id": 0,
     "selector-max-universal": 1,
     "selector-pseudo-class-no-unknown": true,
-    "string-quotes": "single"
+    "string-quotes": "double"
   }
 }

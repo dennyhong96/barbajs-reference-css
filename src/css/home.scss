@@ -1,3 +1,20 @@
 /* Page load animation */
 
+// Barba once() hook
+// Starting state
+.home-once {
+  opacity: 0;
+}
+
+// Defined transition
+.home-once-active {
+  // `duration` determines how long .barba-once-active and .barba-once-to stays on container
+  transition: opacity 1s linear 0.3s;
+}
+
+// Ending state
+.home-once-to {
+  opacity: 1;
+}
+
 /* Slide to home */
