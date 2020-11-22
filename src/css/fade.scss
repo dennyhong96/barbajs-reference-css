@@ -1,1 +1,27 @@
 /* Fade out current container */
+
+// fade Leaving transition
+.fade-leave {
+  opacity: 1;
+}
+
+.fade-leave-active {
+  transition: opacity 0.3s linear;
+}
+
+.fade-leave-to {
+  opacity: 0;
+}
+
+// fade Entering transitoin
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  transition: opacity 0.3s linear;
+}
+
+.fade-enter-to {
+  opacity: 1;
+}
