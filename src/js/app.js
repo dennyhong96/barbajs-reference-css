@@ -4,6 +4,17 @@ import barbaCss from "@barba/css";
 // Use the css plugin
 barba.use(barbaCss);
 
+const body = document.querySelector("body");
+
+// Global hook - runs before any transition defined in barba init
+barba.hooks.before((data) => {
+  console.log(data);
+  const background = data.current.container.dataset.background;
+
+  // Overwrite default white bg on body so fade between pages seems smooth
+  body.style.setProperty("--page-background", background);
+});
+
 barba.init({
   transitions: [
     {
