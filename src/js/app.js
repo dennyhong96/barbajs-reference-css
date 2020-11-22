@@ -67,5 +67,16 @@ barba.init({
       leave() {},
       enter() {},
     },
+
+    // Slide to home
+    {
+      name: "slide",
+      sync: true,
+      to: {
+        namespace: ["home"],
+      },
+      leave() {},
+      enter() {},
+    },
   ],
 });

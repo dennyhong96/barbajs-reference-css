@@ -18,3 +18,31 @@
 }
 
 /* Slide to home */
+.slide-leave {
+  transform: translateX(0);
+}
+
+.slide-leave-active {
+  transition: all 0.7s var(--easing);
+}
+
+.slide-leave-to {
+  transform: translateX(100%);
+}
+
+.slide-enter {
+  transform: translateX(-100%);
+}
+
+.slide-enter-active {
+  transition: all 0.7s var(--easing);
+
+  // Add this to properly stack incoming container over leaving one
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.slide-enter-to {
+  transform: translateX(0);
+}
