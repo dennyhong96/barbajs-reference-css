@@ -25,6 +25,7 @@ barba.init({
       },
       // `once` hook triggers once on page load
       once() {
+        // Empty hook to generate classes...
         console.log("once"); // Will NOT run using CSS plugin, it's used to listen for CSS transition
       },
       afterOnce() {
@@ -39,7 +40,9 @@ barba.init({
       to: {
         namespace: ["fade"], // to which pages do we trigger this fade transition
       },
-      leave() {},
+      leave() {
+        // Empty hook to generate classes...
+      },
       // `enter` hook triggers on entering a page
       enter() {},
     },
@@ -52,9 +55,16 @@ barba.init({
         namespace: ["clip"],
       },
       leave() {},
-      beforeEnter() {
-        console.log("beforeEnter");
+      enter() {},
+    },
+
+    // Cover
+    {
+      name: "with-cover",
+      to: {
+        namespace: ["with-cover"],
       },
+      leave() {},
       enter() {},
     },
   ],

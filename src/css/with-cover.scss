@@ -1,1 +1,38 @@
 /* Transition with cover screen */
+
+.with-cover-leave-active,
+.with-cover-enter-active {
+  // Tells barba how long is the transition
+  transition: transform 0.5s var(--easing);
+
+  // Transition for cover screen
+  .transition {
+    transition: transform 0.5s var(--easing);
+  }
+}
+
+// Cover screen in from top
+.with-cover-leave {
+  .transition {
+    transform: translateY(-100%);
+  }
+}
+
+.with-cover-leave-to {
+  .transition {
+    transform: translateY(0);
+  }
+}
+
+// Cover screen down and out
+.with-cover-enter {
+  .transition {
+    transform: translateY(0);
+  }
+}
+
+.with-cover-enter-to {
+  .transition {
+    transform: translateY(100%);
+  }
+}
