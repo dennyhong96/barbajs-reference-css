@@ -17,6 +17,7 @@ barba.hooks.before((data) => {
 
 barba.init({
   transitions: [
+    // Home
     {
       name: "home", // customize css class name space
       beforeOnce() {
@@ -30,6 +31,8 @@ barba.init({
         console.log("afterOnce");
       },
     },
+
+    // Fade
     {
       name: "fade",
       // `leave` hook triggers on leaving a page
@@ -38,6 +41,20 @@ barba.init({
       },
       leave() {},
       // `enter` hook triggers on entering a page
+      enter() {},
+    },
+
+    // Clip
+    {
+      name: "clip",
+      sync: true, // Both containers will be in the DOM at same time
+      to: {
+        namespace: ["clip"],
+      },
+      leave() {},
+      beforeEnter() {
+        console.log("beforeEnter");
+      },
       enter() {},
     },
   ],
